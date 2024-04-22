@@ -6,10 +6,10 @@ import time
 from datetime import datetime
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'
+app.secret_key = 'super_secret_key'
 app.config['UPLOAD_FOLDER'] = 'uploads/'
 app.config['ALLOWED_EXTENSIONS'] = {'q'}
-app.config['LOG_FILE'] = 'results.log'  # Specify the log file name in config
+app.config['LOG_FILE'] = 'results.log'
 
 if not os.path.exists(app.config['UPLOAD_FOLDER']):
     os.makedirs(app.config['UPLOAD_FOLDER'])
